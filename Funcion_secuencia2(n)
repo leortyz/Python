@@ -1,0 +1,19 @@
+#Escriba una funcion secuencia2(n) que entregue el n-esimo termino
+#de la siguiente secuencia, en la cual cada termino, a partir del
+#cuarto se obtiene sumando los tres anteriores:
+# 1,1,1,3,5,9,17,31,57,...
+def secuencia2(n):
+    n1 = 1
+    n2 = 1
+    n3 = 1
+    enesimo = 0
+    if (n == 1 or n == 2 or n == 3):
+        return n1
+    else:
+        for i in range(n - 3):
+            enesimo = n1 + n2 + n3
+            n1, n2, n3 = n2, n3, enesimo
+        return enesimo
+#implementacion
+enesimo=int(input('Ingrese n-esimo termino a consultar: '))
+print('El n-esimo termino es: %d'%(secuencia2(enesimo)))
