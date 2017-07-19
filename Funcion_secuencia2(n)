@@ -17,3 +17,4 @@ def secuencia2(n):
 #implementacion
 enesimo=int(input('Ingrese n-esimo termino a consultar: '))
 print('El n-esimo termino es: %d'%(secuencia2(enesimo)))
+#recordar separar las funciones del main
